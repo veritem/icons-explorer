@@ -1,17 +1,16 @@
 <script lang="ts">
   import Iconify from "@purge-icons/generated";
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
 
   let iconEl;
 
   export let icon;
 
   async function update() {
-    // await tick();
+    await tick();
 
     if (iconEl) {
       const svg = Iconify.renderSVG(icon, {});
-      console.log({ svg });
       if (svg) {
         iconEl.textContent = "";
         iconEl.appendChild(svg);

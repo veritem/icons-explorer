@@ -1,5 +1,5 @@
 <center>
-<h1>Icons Explorer</h1>
+<h1>Icones Explorer</h1>
 </center>
 
 <center>
@@ -11,7 +11,7 @@
 
 ### Acknowledgement
 
-This project was hugely inspired by [icons website](https://icones.js.org/) 
+This project was hugely inspired by [icones](https://icones.js.org/) 
 
 
 #### Licence 

@@ -16,13 +16,13 @@
   </select>
   <a href="/" class="py-1 font-light text-xl dark:text-white">Icônes</a>
   <div class="flex gap-4">
-    <div class="i-carbon-search text-xl dark:text-white" />
     <!-- svelte-ignore a11y-missing-content -->
-    <div class="i-carbon-logo-github text-xl dark:text-white" />
-    <!-- <a
+    <a href="/collections" class="i-carbon-search text-xl dark:text-white" />
+    <!-- svelte-ignore a11y-missing-content -->
+    <a
       href="https://github.com/veritem/icons-explorer"
-      class="  text-2xl"
-    /> -->
+      class="i-carbon-logo-github text-xl dark:text-white"
+    />
 
     <ThemeSwitcher />
   </div>

@@ -1,9 +1,13 @@
 <script>
   import { meta } from "tinro";
+  import Footer from "../lib/Footer.svelte";
   import IconSet from "../lib/icons/IconSet.svelte";
+  import Nav from "../lib/Nav.svelte";
   import { setCurrentCollection, useCurrentCollection } from "../store";
 
   const collection = useCurrentCollection();
+
+  console.log({ collection });
 
   $: setCurrentCollection(meta().params.id);
 </script>
@@ -13,6 +17,7 @@
     Loading...
   </div>
 {:else}
+  <Nav />
   <section class="m-10">
     <div>
       <input
@@ -25,4 +30,5 @@
       <IconSet icons={collection.icons} />
     </div>
   </section>
+  <Footer />
 {/if}
