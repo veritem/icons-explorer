@@ -1,15 +1,17 @@
 <script lang="ts">
   import Iconify from "@purge-icons/generated";
-  import { tick } from "svelte";
+  import { onMount } from "svelte";
 
   let iconEl;
 
   export let icon;
 
-  async function update(icon) {
-    await tick();
-    if (iconEl.value) {
+  async function update() {
+    // await tick();
+
+    if (iconEl) {
       const svg = Iconify.renderSVG(icon, {});
+      console.log({ svg });
       if (svg) {
         iconEl.value.textContent = "";
         iconEl.value.appendChild(svg);
@@ -17,13 +19,17 @@
         const span = document.createElement("span");
         span.className = "iconify";
         span.dataset.icon = icon;
-        iconEl.value.textContent = "";
-        iconEl.value.appendChild(span);
+        iconEl.textContent = "";
+        iconEl.appendChild(span);
       }
     }
   }
 
-  $: update(icon);
+  // console.log(iconEl.textContent);
+
+  onMount(async () => await update());
+
+  //   $: update(icon);
 </script>
 
 <div bind:this={iconEl} />

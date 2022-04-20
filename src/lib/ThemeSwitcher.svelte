@@ -1,13 +1,18 @@
 <script lang="ts">
   let isDark = false;
   if (typeof localStorage !== "undefined") {
-    if (
-      localStorage.getItem("theme") === "dark" ||
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    if (localStorage.getItem("theme") === "light") {
+      isDark = false;
+    } else {
       isDark = true;
       document.getElementsByTagName("html")[0].classList.add("dark");
     }
+    // if (
+    //   localStorage.getItem("theme") === "dark" ||
+    //   window.matchMedia("(prefers-color-scheme: dark)").matches
+    // ) {
+    //   isDark = true;
+    // }
   }
   function toggleDarkMode() {
     if (isDark) {
@@ -24,5 +29,5 @@
 
 <button
   on:click={toggleDarkMode}
-  class="i-carbon-sun  dark:i-carbon-moon dark:text-white text-xl"
+  class="i-carbon-sun  dark:i-carbon-moon dark:text-white text-2xl"
 />

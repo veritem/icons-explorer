@@ -14,7 +14,7 @@
       <option value={cat}>{cat.split("/")[0].trim()}</option>
     {/each}
   </select>
-  <h1 class="py-1 font-light text-xl">Icônes</h1>
+  <a href="/" class="py-1 font-light text-xl">Icônes</a>
   <div class="flex gap-4">
     <div class="i-carbon-search text-xl" />
     <!-- svelte-ignore a11y-missing-content -->

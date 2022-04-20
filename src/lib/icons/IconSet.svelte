@@ -1,8 +1,11 @@
 <script lang="ts">
+  import { useCurrentCollection } from "../../store";
   import Icons from "./Icons.svelte";
 
   export let icons: string[];
   let max = 500;
+
+  const collection = useCurrentCollection();
 </script>
 
 <div class="px-4 pt-2 pb-4 text-center">
@@ -13,7 +16,12 @@
   <p class="text-gray-500 text-sm pt-4 dark:text-white">
     {icons.length} icons
   </p> -->
-  <Icons icons={icons.slice(0, max)} size="2xl" colorClass="" />
+  <Icons
+    icons={icons.slice(0, max)}
+    size="2xl"
+    colorClass=""
+    namespace={collection.id}
+  />
 
   {#if icons.length > max}
     <div class="flex justify-center">

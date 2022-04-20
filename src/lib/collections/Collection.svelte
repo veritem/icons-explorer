@@ -1,6 +1,7 @@
 <script lang="ts">
   import { isFavorited } from "../../store";
   import type { CollectionInfo } from "../data";
+  import Icons from "../icons/Icons.svelte";
 
   export let collection: CollectionInfo;
 </script>
@@ -23,7 +24,12 @@
       </div>
     </div>
   </a>
-  <!-- <Icons icons={collection.sampleIcons} size="xl" colorClass="" /> -->
+  <Icons
+    icons={collection.sampleIcons}
+    size="xl"
+    colorClass=""
+    namespace={collection.id}
+  />
   {#if isFavorited(collection.id)}
     <button
       class="i-carbon-bookmark absolute top-0 right-0 p-2 text-lg dark:text-gray-100"
