@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { meta } from "tinro";
   import Footer from "../lib/Footer.svelte";
   import IconSet from "../lib/icons/IconSet.svelte";
@@ -6,8 +6,6 @@
   import { setCurrentCollection, useCurrentCollection } from "../store";
 
   const collection = useCurrentCollection();
-
-  console.log({ collection });
 
   $: setCurrentCollection(meta().params.id);
 </script>

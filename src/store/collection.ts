@@ -10,6 +10,10 @@ export function useCurrentCollection() {
   return get(collection);
 }
 
+export function isLoading() {
+  return get(loaded);
+}
+
 export async function setCurrentCollection(id: string) {
   currentCollectionId.set(id);
 
