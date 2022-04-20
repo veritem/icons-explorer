@@ -5,6 +5,7 @@
   import Footer from "./lib/Footer.svelte";
   import Nav from "./lib/Nav.svelte";
   import About from "./pages/about.svelte";
+  import Allcollections from "./pages/Allcollections.svelte";
   import Home from "./pages/index.svelte";
 </script>
 
@@ -12,6 +13,10 @@
   <Nav />
   <Route path="/">
     <Home />
+  </Route>
+
+  <Route path="/collections/all">
+    <Allcollections />
   </Route>
 
   <Route path="/about">

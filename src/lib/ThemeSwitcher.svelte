@@ -24,5 +24,5 @@
 
 <button
   on:click={toggleDarkMode}
-  class="i-carbon-sun  dark:i-carbon-moon dark:text-white"
+  class="i-carbon-sun  dark:i-carbon-moon dark:text-white text-xl"
 />
