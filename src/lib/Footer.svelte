@@ -1,4 +1,4 @@
-<footer class="text-gray-500 text-center">
+<footer class="text-gray-500 text-center my-10">
   built by <a href="https://twitter.com/veritemm">@verite</a>
 
   <p>

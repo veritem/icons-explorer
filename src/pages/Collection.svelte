@@ -13,5 +13,16 @@
     Loading...
   </div>
 {:else}
-  <IconSet icons={collection.icons} />
+  <section class="m-10">
+    <div>
+      <input
+        type="text"
+        placeholder="search"
+        class="px-2 w-full py-2 border border-gray-200 focus:outline-none rounded-sm dark:border-dark-200 dark:bg-transparent dark:text-white"
+      />
+    </div>
+    <div class="text-dark-500 dark:text-gray-300">
+      <IconSet icons={collection.icons} />
+    </div>
+  </section>
 {/if}

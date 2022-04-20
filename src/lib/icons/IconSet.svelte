@@ -16,19 +16,21 @@
   <p class="text-gray-500 text-sm pt-4 dark:text-white">
     {icons.length} icons
   </p> -->
-  <Icons
+  <!-- <Icons
     icons={icons.slice(0, max)}
     size="2xl"
     colorClass=""
     namespace={collection.id}
-  />
+  /> -->
 
-  {#if icons.length > max}
+  <Icons {icons} size="2xl" colorClass="" namespace={collection.id} />
+  <!--  -->
+  <!-- {#if icons.length > max}
     <div class="flex justify-center">
-      <!-- TODO: Implement show more -->
+      TODO: Implement show more
       <button class="text-sm text-gray-500 dark:text-white"> Show more </button>
     </div>
-  {/if}
+  {/if} -->
   <p class="text-gray-500 text-sm pt-4">
     {icons.length} icons
   </p>

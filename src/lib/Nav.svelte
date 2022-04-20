@@ -6,7 +6,7 @@
 </script>
 
 <nav
-  class="flex justify-between p-2 border-b border-gray-200 dark:bg-dark-100 dark:border-dark-200"
+  class="flex justify-between px-8 py-4 border-b border-gray-200 dark:bg-dark-100 dark:border-dark-200"
 >
   <select class="text-current dark:bg-dark-100 mx-3">
     <option>All</option>
@@ -14,11 +14,11 @@
       <option value={cat}>{cat.split("/")[0].trim()}</option>
     {/each}
   </select>
-  <a href="/" class="py-1 font-light text-xl">Icônes</a>
+  <a href="/" class="py-1 font-light text-xl dark:text-white">Icônes</a>
   <div class="flex gap-4">
-    <div class="i-carbon-search text-xl" />
+    <div class="i-carbon-search text-xl dark:text-white" />
     <!-- svelte-ignore a11y-missing-content -->
-    <div class="i-carbon-logo-github text-xl" />
+    <div class="i-carbon-logo-github text-xl dark:text-white" />
     <!-- <a
       href="https://github.com/veritem/icons-explorer"
       class="  text-2xl"

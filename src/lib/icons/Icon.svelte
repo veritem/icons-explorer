@@ -13,8 +13,8 @@
       const svg = Iconify.renderSVG(icon, {});
       console.log({ svg });
       if (svg) {
-        iconEl.value.textContent = "";
-        iconEl.value.appendChild(svg);
+        iconEl.textContent = "";
+        iconEl.appendChild(svg);
       } else {
         const span = document.createElement("span");
         span.className = "iconify";
@@ -25,11 +25,7 @@
     }
   }
 
-  // console.log(iconEl.textContent);
-
   onMount(async () => await update());
-
-  //   $: update(icon);
 </script>
 
 <div bind:this={iconEl} />

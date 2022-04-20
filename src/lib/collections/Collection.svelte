@@ -23,13 +23,14 @@
         <span>{collection.total} icons</span>
       </div>
     </div>
+    <Icons
+      icons={collection.sampleIcons}
+      size="xl"
+      colorClass=""
+      namespace={collection.id}
+    />
   </a>
-  <Icons
-    icons={collection.sampleIcons}
-    size="xl"
-    colorClass=""
-    namespace={collection.id}
-  />
+
   {#if isFavorited(collection.id)}
     <button
       class="i-carbon-bookmark absolute top-0 right-0 p-2 text-lg dark:text-gray-100"

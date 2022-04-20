@@ -10,7 +10,7 @@
   import Home from "./pages/index.svelte";
 </script>
 
-<section class="bg-white dark:bg-dark h-full w-full dark:text-white">
+<section class="bg-white dark:bg-dark h-full w-full min-h-screen">
   <Nav />
   <Route path="/">
     <Home />
