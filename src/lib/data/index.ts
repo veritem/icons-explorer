@@ -1,5 +1,5 @@
 import type { IconifyJSON } from "@purge-icons/generated";
-import { writable } from "svelte/store";
+import { get, writable } from "svelte/store";
 import infoJSON from "./collections-info.json";
 
 export interface CollectionInfo {
@@ -20,7 +20,7 @@ export interface CollectionMeta extends CollectionInfo {
   categories?: Record<string, string[]>;
 }
 
-const loadedMeta = writable<CollectionMeta>();
+const loadedMeta = writable<CollectionMeta[]>([]);
 const installed = writable<string[]>();
 
 export const collections = infoJSON.map((c) =>
@@ -50,3 +50,27 @@ const categoryFilter = writable<string | undefined>(undefined);
 //         favoritedCollections.value.indexOf(a.id)
 //     );
 // };
+
+export async function getFullMeta() {
+  if (get(loadedMeta).length === collections.length) return get(loadedMeta);
+  loadedMeta.set(
+    Object.freeze(await fetch("./collections.json").then((r) => r.json()))
+  );
+  return get(loadedMeta);
+}
+
+export async function getMeta(id: string) {
+  let loadedMetaData = get(loadedMeta);
+  let meta = loadedMetaData.find((m) => m.id === id);
+  if (meta) return meta;
+
+  meta = Object.freeze(
+    await fetch(`/collections/${id}-meta.json`).then((r) => r.json())
+  );
+
+  if (!meta) return null;
+
+  loadedMeta.update((m) => [...m, meta]);
+
+  return meta;
+}

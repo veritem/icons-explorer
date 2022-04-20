@@ -26,6 +26,7 @@ dist-ssr
 src/assets/collections.json
 .DS_Store
 
+public/collections
 src/assets/collections
 src/assets/lib 
 release 
