@@ -1,0 +1,7 @@
+**/src-tauri
+**/node_modules
+**/public 
+**/src/assets/lib
+src/lib/data/collections-info.json
+src/assets/collections-meta.json
+**/dist

@@ -1,2 +1,2 @@
-export * from "./collection";
-export * from "./localstorage";
+export * from './collection';
+export * from './localstorage';

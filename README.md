@@ -5,15 +5,18 @@
 <center>
   <h3>Icons explorer powered by <a href="https://github.com/iconify/iconify">Iconify</a>
 </center>
-[screenshoots]
 
+<center>
+
+[screenshoots will go here]()
+
+</center>
 
 
 ### Acknowledgement
 
-This project was hugely inspired by [icones](https://icones.js.org/) 
+This project was hugely inspired by [icones](https://icones.js.org/)
 
-
-#### Licence 
+#### Licence
 
 [MIT](https://github.com/veritem/useform/blob/main/LICENSE) Licence @2022 - PRESENT [@veritem](https://github.com/veritem)

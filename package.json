@@ -1,42 +1,45 @@
 {
-  "name": "icons",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "postinstall": "esmo scripts/prepare.ts",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "tauri": "tauri"
-  },
-  "devDependencies": {
-    "@iconify/json": "^2.1.30",
-    "@purge-icons/generated": "^0.8.1",
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
-    "@tauri-apps/cli": "^1.0.0-rc.8",
-    "@tsconfig/svelte": "^2.0.1",
-    "@unocss/preset-attributify": "^0.31.6",
-    "@unocss/preset-icons": "^0.31.6",
-    "@unocss/preset-uno": "^0.31.6",
-    "@unocss/preset-web-fonts": "^0.31.6",
-    "fs-extra": "^10.1.0",
-    "jszip": "^3.9.1",
-    "svelte": "^3.44.0",
-    "svelte-check": "^2.2.7",
-    "svelte-preprocess": "^4.9.8",
-    "svg-packer": "^0.0.3",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.4",
-    "unocss": "^0.31.6",
-    "vite": "^2.9.5"
-  },
-  "dependencies": {
-    "@iconify/iconify": "^2.2.1",
-    "@tauri-apps/api": "^1.0.0-rc.3",
-    "@unocss/reset": "^0.31.6",
-    "esno": "^0.14.1",
-    "tinro": "^0.6.12"
-  }
+	"name": "icons",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"postinstall": "esmo scripts/prepare.ts",
+		"dev": "vite",
+		"start": "tauri dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"tauri": "tauri",
+		"format": "prettier --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@iconify/json": "^2.1.30",
+		"@purge-icons/generated": "^0.8.1",
+		"@sveltejs/vite-plugin-svelte": "^1.0.0-next.41",
+		"@tauri-apps/cli": "^1.0.0-rc.8",
+		"@tsconfig/svelte": "^3.0.0",
+		"@unocss/preset-attributify": "^0.31.12",
+		"@unocss/preset-icons": "^0.31.12",
+		"@unocss/preset-uno": "^0.31.12",
+		"@unocss/preset-web-fonts": "^0.31.12",
+		"fs-extra": "^10.1.0",
+		"jszip": "^3.9.1",
+		"prettier": "^2.6.2",
+		"svelte": "^3.47.0",
+		"svelte-check": "^2.7.0",
+		"svelte-preprocess": "^4.10.6",
+		"svg-packer": "^0.0.3",
+		"tslib": "^2.3.1",
+		"typescript": "^4.6.3",
+		"unocss": "^0.31.12",
+		"vite": "^2.9.5"
+	},
+	"dependencies": {
+		"@iconify/iconify": "^2.2.1",
+		"@tauri-apps/api": "^1.0.0-rc.3",
+		"@unocss/reset": "^0.31.12",
+		"esno": "^0.14.1",
+		"tinro": "^0.6.12"
+	}
 }
