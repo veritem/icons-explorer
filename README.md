@@ -2,12 +2,21 @@
 
   <h3 align="center">Icons explorer powered by <a href="https://github.com/iconify/iconify">Iconify</a>
 
+<br/>
+<br/>
+
 
 <center>
 
-[screenshoots will go here]()
+ <img src="public/screenshots/dark.png" alt="dark version">
+  <br/>
+ <img src="public/screenshots/light.png" alt="light version">
 
 </center>
+
+
+<br/>
+<br/>
 
 ### Acknowledgement
 

@@ -4,13 +4,17 @@
 	import Icons from './Icons.svelte';
 
 	export let icons: string[];
+
 	let max = 500;
 
 	let collection: CollectionMeta;
 
-	$: useCurrentCollection().subscribe((c) => {
-		collection = c;
-	});
+	$: {
+		useCurrentCollection().subscribe((c) => {
+			if (c === null) return;
+			collection = c;
+		});
+	}
 </script>
 
 <div class="px-4 pt-2 pb-4 text-center">

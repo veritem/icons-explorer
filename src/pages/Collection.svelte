@@ -5,7 +5,8 @@
 	import IconSet from '../lib/icons/IconSet.svelte';
 	import Nav from '../lib/Nav.svelte';
 	import { setCurrentCollection, useCurrentCollection } from '../store';
-	tion: CollectionMeta;
+
+	let collection: CollectionMeta;
 
 	useCurrentCollection().subscribe((c) => {
 		collection = c;
@@ -21,7 +22,7 @@
 {:else}
 	<Nav />
 
-	<h2 class="text-red-500 text-5xl">{collection.name}</h2>
+	<h2 class="dark:text-white text-gray-500 text-xl px-5 py-6">{collection.name}</h2>
 
 	<section class="m-10">
 		<div>
