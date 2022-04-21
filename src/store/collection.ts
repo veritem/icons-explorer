@@ -1,17 +1,18 @@
 import { get, writable } from 'svelte/store';
-import { CollectionMeta, getFullMeta, getMeta } from '../lib/data';
+import type { CollectionMeta } from '../lib/data';
+import { getFullMeta, getMeta } from '../lib/data';
 
-const collection = writable<CollectionMeta | null>(null);
+const collection = writable<CollectionMeta>(null);
 const currentCollectionId = writable('');
 const loaded = writable(false);
 const installed = writable(false);
 
 export function useCurrentCollection() {
-	return get(collection);
+	return collection;
 }
 
 export function isLoading() {
-	return get(loaded);
+	return loaded;
 }
 
 export async function setCurrentCollection(id: string) {
@@ -36,5 +37,6 @@ export async function setCurrentCollection(id: string) {
 		collection.set(await getMeta(id));
 		loaded.set(false);
 	}
-	return get(collection);
+
+	return collection;
 }

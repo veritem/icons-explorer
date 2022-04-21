@@ -56,8 +56,7 @@ export async function getFullMeta() {
 }
 
 export async function getMeta(id: string) {
-	let loadedMetaData = get(loadedMeta);
-	let meta = loadedMetaData.find((m) => m.id === id);
+	let meta = get(loadedMeta).find((m) => m.id === id);
 	if (meta) return meta;
 
 	meta = Object.freeze(await fetch(`/collections/${id}-meta.json`).then((r) => r.json()));

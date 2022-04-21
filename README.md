@@ -1,17 +1,13 @@
-<center>
-<h1>Icones Explorer</h1>
-</center>
+<h1 align="center">Icones Explorer</h1>
 
-<center>
-  <h3>Icons explorer powered by <a href="https://github.com/iconify/iconify">Iconify</a>
-</center>
+  <h3 align="center">Icons explorer powered by <a href="https://github.com/iconify/iconify">Iconify</a>
+
 
 <center>
 
 [screenshoots will go here]()
 
 </center>
-
 
 ### Acknowledgement
 
