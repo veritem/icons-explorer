@@ -1,6 +1,6 @@
 <h1 align="center">Icones Explorer</h1>
 
-  <h3 align="center">Icons explorer powered by <a href="https://github.com/iconify/iconify">Iconify</a>
+  <p align="center">Icons explorer powered by <a href="https://github.com/iconify/iconify">Iconify</a> </p>
 
 <br/>
 <br/>
